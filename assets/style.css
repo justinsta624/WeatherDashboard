@@ -1,0 +1,66 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    background: navy;
+    color: antiquewhite;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .search-history-button {
+    display: flex;
+    flex-direction: column;
+    color: antiquewhite;
+    padding: 10px;
+  }
+
+  .current-weather-condition {
+    display: flex;
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .future-weather-condition {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: brown;
+    font-size: xx-large;
+  }
+  
+  .future-weather-condition header {
+    padding: 20px 10px;
+    font-size: 30px
+  }
+
+/* Resize screen under 768px will apply following condition */
+
+@media screen and (max-width: 768px) {
+    .future-weather-condition {
+        flex-direction: column;
+        background-color: lightgreen;
+    }
+
+    .row {
+        background-color: lightblue;
+        height: auto;
+    }
+
+    .current-weather-condition {
+        background-color: lightgray;
+    }
+  
+    #searchform {
+        background-color: antiquewhite;
+        height: auto;
+    }
+  }
+  
+  
