@@ -56,9 +56,8 @@ function OpenWeather(CityName) {
 
                     CurrentWeatherCondition.innerHTML = 
 
-                    `<ul><li class="title">${OpenCurrentWeather.name}/<span> 
-                    ${moment(OpenCurrentWeather.dt,"X").format("MM/DD/YYYY")}
-                    </span></li> 
+                    `<ul><li class="title"> ${OpenCurrentWeather.name}
+                    (${moment(OpenCurrentWeather.dt,"X").format("MMM/DD/YYYY")})</li>
                     <li><img src ="https://openweathermap.org/img/wn/${OpenCurrentWeather.weather[0].icon}@2x.png" /></li> 
                     <li>Temperature: ${OpenCurrentWeather.main.temp}°C </li>
                     <li>Humidity: ${OpenCurrentWeather.main.humidity}% </li>
@@ -74,7 +73,7 @@ function OpenWeather(CityName) {
                     var WeatherCards = "";
                     for (var i = 1; i <= 5; i++) {
                     WeatherCards = WeatherCards + `<ul class="col-12 col-xl-2 day">
-                    <li>${moment(OpenFutureWeather.daily[i].dt,"X").format(" MM/DD/YYYY")}</li>
+                    <li>(${moment(OpenFutureWeather.daily[i].dt,"X").format("MMM/DD/YYYY")})</li>
                     <li><img src ="https://openweathermap.org/img/wn/${OpenFutureWeather.daily[i].weather[0].icon}@2x.png" /></li>
                     <li>Temperature: ${OpenFutureWeather.daily[i].temp.day}°C </li>
                     <li>Wind-Speed: ${OpenFutureWeather.daily[i].wind_speed}M/S </li>
