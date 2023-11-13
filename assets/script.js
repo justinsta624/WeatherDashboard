@@ -102,5 +102,20 @@ function OpenCity() {
 }
 OpenCity();
 
+// Call the function WeatherDashboard when the SearchForm is submitted.
+SearchForm.addEventListener("submit", WeatherDashboard); 
+
+// Clear all items in localStorage & reset the PastSearch array
+// innerHTML: Clears the content inside the HTML element "#search-history-button"
+function resetPastSearch() {
+    localStorage.clear();
+    SearchHistoryBtnEl.innerHTML = "";
+    PastSearch = [];
+}
+
+// Resets the past search history and clears local storage, when click the reset button
+ResetBtn.addEventListener("click", function () {
+    resetPastSearch();
+});
 
 
