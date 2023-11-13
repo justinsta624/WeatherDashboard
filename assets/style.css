@@ -2,43 +2,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 
 * {
-    font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 header {
-    background: navy;
-    color: antiquewhite;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
+  background: navy;
+  color: antiquewhite;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
-  .search-history-button {
-    display: flex;
-    flex-direction: column;
-    color: antiquewhite;
-    padding: 10px;
-  }
+.search-history-button {
+  display: flex;
+  flex-direction: column;
+  color: antiquewhite;
+  background-color: aquamarine;
+  padding: 10px;
+}
 
-  .current-weather-condition {
-    display: flex;
-    border: 1px solid;
-    padding: 10px;
-    margin: 10px;
-  }
+.current-weather-condition {
+  display: flex;
+  padding: 10px;
+  color: brown;
+}
 
-  .future-weather-condition {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: brown;
-    font-size: xx-large;
-  }
+.future-weather-condition {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  font-size: x-large;
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+}
   
-  .future-weather-condition header {
-    padding: 20px 10px;
-    font-size: 30px
-  }
+.future-weather-condition header {
+  padding: 20px 10px;
+  justify-content: space-between;
+}
+  
+.current-weather-condition ul {
+  list-style: none;
+  border: 10px solid magenta;
+  font-size: x-large;
+  padding: 10px;
+  margin: 10px;
+}
+  
 
 /* Resize screen under 768px will apply following condition */
 
@@ -61,6 +73,5 @@ header {
         background-color: antiquewhite;
         height: auto;
     }
-  }
-  
+}
   
