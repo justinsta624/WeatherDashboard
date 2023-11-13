@@ -72,7 +72,7 @@ THEN I am again presented with current and future conditions for that city
 ```
 
 ## Screenshot of the deployed application
-![image](https://github.com/justinsta624/WeatherDashboard/assets/143357899/b9d1fce7-88ac-4dea-ac5a-88c7e511029e)
+![image](https://github.com/justinsta624/WeatherDashboard/assets/143357899/769f7df9-e4fb-4995-b879-68b193dc702b)
 
 ## URL of the functional, deployed application
 https://justinsta624.github.io/WeatherDashboard
