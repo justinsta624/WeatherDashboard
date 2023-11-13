@@ -34,8 +34,8 @@ header {
   color: black;
   font-size: x-large;
   list-style: none;
-  padding: 10px;
-  margin: 10px;
+  padding: 2%;
+  margin: 20px;
 }
   
 .future-weather-condition header {
@@ -89,4 +89,3 @@ header {
   }
 }
 
-  
