@@ -22,26 +22,28 @@
     <main class="container-fluid">
         <div class="row">
             <!-- Bootstrap Grid system "external source: https://getbootstrap.com/docs/5.0/layout/grid" -->
-            <div class="col-md-3 col-3 text-white">
+            <div class="col-5 col-md-3 text-white">
                 <!-- Bootstrap forms "external source: https://www.w3schools.com/bootstrap5/bootstrap_forms.php" -->
                 <form id="search-form">
-                    <label class="text-primary"> Search by &#127961; </label>
-                    <input class="form-control my-1 text-primary" type="search" placeholder="Name of the City (e.g. Toronto, Vancouver)" id="city-text">
+                    <label class="text-primary" style="font-size: x-large"> Search by &#128508; &#128509; &#128511;</label>
+                    <input class="form-control my-2 text-primary" type="search" placeholder="Name of the City (e.g. Toronto, Seoul)" id="city-text">
                     <!-- Bootstrap buttons "external source: https://www.w3schools.com/bootstrap5/bootstrap_buttons.php" -->
                     <button class="btn btn-outline-primary my-1" type="submit" id="submit-button">Submit
                     <span class="spinner-border spinner-border-sm"></span>
                     </button>
                 </form>
-                <button class="btn btn-primary my-1" style="width: 28%" type="submit" id="reset-button">Reset</button>
+                <button class="btn btn-primary my-2" style="width: 100%" type="submit" id="reset-button">Reset</button>
                 <hr>
                 <div class="search-history-button" id="search-history-button"></div>
             </div>
             <!-- Bootstrap Grid system "external source: https://getbootstrap.com/docs/5.0/layout/grid" -->
-            <div class="col-md-9 col-12 text-dark">
+            <div class="col-12 col-md-9 text-dark">
                 <!-- Display Current weather condition -->                
                 <div class="row current-weather-condition" id="current-weather-condition"></div>
                 <!-- Display future weather condition: 5-Day Forecast -->
-                <div class="row future-weather-condition header"> 5-day forecast &#9748;&#10054;&#9925;&#9924; </div>
+            </span>
+                <div class="row future-weather-condition header" style="background-color: blueviolet; color: beige;"> 5-day forecast &#9748;&#10054;&#9925;&#9924; </div>
+            </span>
                 <div class="future-weather-condition" id="future-weather-condition"></div>
             </div>
         </div>
@@ -53,6 +55,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Add JQuery user interface "external source: https://blog.jqueryui.com/2022/07/jquery-ui-1-13-2-released" -->
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- Displaying date/time in JavaScript "external source: https://cdnjs.com/libraries/moment.js" -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
