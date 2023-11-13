@@ -37,10 +37,47 @@ function OpenWeather(CityName) {
                         PastSearch.push(OpenCurrentWeather.name);
                         localStorage.setItem("city", JSON.stringify(PastSearch));
                     }
-                OpenCity();
-                console.log(OpenFutureWeather);
-                
+                    OpenCity();
+                    console.log(OpenFutureWeather);
+
+                    // use Moment JS to change date format in jQuery "external source: https://www.geeksforgeeks.org/how-to-use-moment-js-to-change-date-format-in-jquery/" 
+                    // Template Literal: "external source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+                    // innerHTML: replaces the content inside HTML element "#CurrentWeatherCondition" with followings:
+
+                    CurrentWeatherCondition.innerHTML = 
+
+                    `<ul><li class="title">${OpenCurrentWeather.name}/<span> 
+                    ${moment(OpenCurrentWeather.dt,"X").format("MM/DD/YYYY")}
+                    </span></li> 
+                    <li><img src ="http://openweathermap.org/img/wn/${OpenCurrentWeather.weather[0].icon}@2x.png" /></li> 
+                    <li>Temp: ${OpenCurrentWeather.main.temp}</li>
+                    <li>Wind: ${OpenCurrentWeather.wind.speed}</li>
+                    <li>Humidity: ${OpenCurrentWeather.main.humidity}</li>
+                    </ul>`;
+                    // From the OpenWeatherMap API;
+                    // OpenCurrentWeather.name: name of the city
+                    // ${moment(OpenCurrentWeather.dt,"X").format("MM/DD/YYYY")}: Uses the moment.js library to format the timestamp into a readable date format. 
+                    // external source: https://momentjscom.readthedocs.io/en/latest/moment/01-parsing/03-string-format/
+                    // Weather image ICON URL "external source: https://openweathermap.org/weather-conditions"
+                    // Display temperature, wind speed, humidity              
+
+                    var WeatherCards = "";
+                    for (var i = 1; i <= 5; i++) {
+                    WeatherCards = WeatherCards + `<ul class="col-12 col-xl-2 day">
+                    <li>${moment(OpenFutureWeather.daily[i].dt,"X").format(" MM/DD/YYYY")}</li>
+                    <li><img src ="http://openweathermap.org/img/wn/${OpenFutureWeather.daily[i].weather[0].icon}@2x.png" /></li>
+                    <li>Temp: ${OpenFutureWeather.daily[i].temp.day}</li>
+                    <li>Wind: ${OpenFutureWeather.daily[i].wind_speed}</li>
+                    <li>Humidity: ${OpenFutureWeather.daily[i].humidity}</li>
+                    </ul>`;
+                    // From the OpenWeatherMap API;
+                    // ${moment(OpenFutureWeather.daily[i].dt,"X").format(" MM/DD/YYYY")}: Uses the moment.js library to format the timestamp for the specific day into a readable date format.
+                    // Weather image ICON URL "external source: https://openweathermap.org/weather-conditions"
+                    // Display temperature, wind speed, humidity for the specific day
+                }
+                    // innerHTML: replaces the HTML element "#FutureWeatherCondition" with weather cards
+                    FutureWeatherCondition.innerHTML = WeatherCards;
                 });
-            });
-    }
+        });
+}
 
