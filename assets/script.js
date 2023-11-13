@@ -24,7 +24,7 @@ function OpenWeather(CityName) {
     // One call weather data: https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={APIkey}
     // search by city name: https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={APIkey}
     var APIKey = "3f1c7050fcbbe8196d43f120c87753f7";
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + CityName + "&units=metric&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + CityName + "&units=metric&appid=" + APIKey;
     // fetching weather data from the OpenWeatherMap API (search by city name)
     fetch(queryURL)
         .then(function (response) {
@@ -59,7 +59,7 @@ function OpenWeather(CityName) {
                     `<ul><li class="title">${OpenCurrentWeather.name}/<span> 
                     ${moment(OpenCurrentWeather.dt,"X").format("MM/DD/YYYY")}
                     </span></li> 
-                    <li><img src ="http://openweathermap.org/img/wn/${OpenCurrentWeather.weather[0].icon}@2x.png" /></li> 
+                    <li><img src ="https://openweathermap.org/img/wn/${OpenCurrentWeather.weather[0].icon}@2x.png" /></li> 
                     <li>Temperature: ${OpenCurrentWeather.main.temp}°C </li>
                     <li>Humidity: ${OpenCurrentWeather.main.humidity}% </li>
                     <li>Wind-Speed: ${OpenCurrentWeather.wind.speed}M/S </li>
@@ -75,7 +75,7 @@ function OpenWeather(CityName) {
                     for (var i = 1; i <= 5; i++) {
                     WeatherCards = WeatherCards + `<ul class="col-12 col-xl-2 day">
                     <li>${moment(OpenFutureWeather.daily[i].dt,"X").format(" MM/DD/YYYY")}</li>
-                    <li><img src ="http://openweathermap.org/img/wn/${OpenFutureWeather.daily[i].weather[0].icon}@2x.png" /></li>
+                    <li><img src ="https://openweathermap.org/img/wn/${OpenFutureWeather.daily[i].weather[0].icon}@2x.png" /></li>
                     <li>Temperature: ${OpenFutureWeather.daily[i].temp.day}°C </li>
                     <li>Wind-Speed: ${OpenFutureWeather.daily[i].wind_speed}M/S </li>
                     <li>Humidity: ${OpenFutureWeather.daily[i].humidity}% </li>
