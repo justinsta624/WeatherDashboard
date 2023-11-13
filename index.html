@@ -24,15 +24,15 @@
             <!-- Bootstrap Grid system "external source: https://getbootstrap.com/docs/5.0/layout/grid" -->
             <div class="col-5 col-md-3 text-white">
                 <!-- Bootstrap forms "external source: https://www.w3schools.com/bootstrap5/bootstrap_forms.php" -->
-                <form id="search-form">
+                <div id="search-form">
                     <label class="text-primary" style="font-size: x-large"> Search by &#128508; &#128509; &#128511;</label>
-                    <input class="form-control my-2 text-primary" type="search" placeholder="Name of the City (e.g. Toronto, Seoul)" id="city-text">
+                    <input class="form-control my-2 text-primary" placeholder="Name of the City (e.g. Toronto, Seoul)" id="city-text">
                     <!-- Bootstrap buttons "external source: https://www.w3schools.com/bootstrap5/bootstrap_buttons.php" -->
-                    <button class="btn btn-outline-primary my-1" type="submit" id="submit-button">Submit
+                    <button class="btn btn-outline-primary my-1" id="submit-button">Submit
                     <span class="spinner-border spinner-border-sm"></span>
                     </button>
-                </form>
-                <button class="btn btn-primary my-2" style="width: 100%" type="submit" id="reset-button">Reset</button>
+                </div>
+                <button class="btn btn-primary my-2" id="reset-button">Reset</button>
                 <hr>
                 <div class="search-history-button" id="search-history-button"></div>
             </div>
@@ -60,3 +60,4 @@
     <script src="./assets/script.js"></script>
 </body>
 </html>
+
