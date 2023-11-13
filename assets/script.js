@@ -81,3 +81,26 @@ function OpenWeather(CityName) {
         });
 }
 
+function OpenCity() {
+    // retrieving/parsing JSON data stored under "city" in the localStorage and assigning it to the variable PastSearch.
+    if (localStorage.getItem("city")) {
+        PastSearch = JSON.parse(localStorage.getItem("city"));
+    }
+    // load saved data from the localStorage underneath the reset button
+    var SearchList = "";
+    for (var i = 0; i < PastSearch.length; i++) {
+        SearchList = SearchList + `<button class="btn btn-secondary my-2" type="submit">${PastSearch[i]}</button>`;
+    }
+    // innerHTML: replaces the content inside HTML element "#search-history-button" with variable function SearchList
+    SearchHistoryBtnEl.innerHTML = SearchList;
+    var ShowHistory = document.querySelectorAll(".my-2");
+    for (var i = 0; i < ShowHistory.length; i++) {
+        ShowHistory[i].addEventListener("click", function () {
+            OpenWeather(this.textContent);
+        });
+    }
+}
+OpenCity();
+
+
+
