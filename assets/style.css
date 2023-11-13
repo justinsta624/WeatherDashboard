@@ -41,6 +41,7 @@ header {
 .future-weather-condition header {
   padding: 20px 10px;
   justify-content: space-between;
+  list-style: none;
 }
   
 .current-weather-condition ul {
@@ -50,28 +51,42 @@ header {
   padding: 10px;
   margin: 10px;
 }
-  
 
-/* Resize screen under 768px will apply following condition */
-
-@media screen and (max-width: 768px) {
-    .future-weather-condition {
-        flex-direction: column;
-        background-color: lightgreen;
-    }
-
-    .row {
-        background-color: lightblue;
-        height: auto;
-    }
-
-    .current-weather-condition {
-        background-color: lightgray;
-    }
-  
-    #searchform {
-        background-color: antiquewhite;
-        height: auto;
-    }
+.future-weather-condition ul {
+  list-style: none;
+  border: 10px solid gray;
+  font-size: large;
+  padding: 5px;
+  margin: 5px;
 }
+
+/* Apply media queries screen styles for screens smaller than 768px */
+
+@media screen and (max-width: 767px) {
+
+  .col-5 {
+    width: 100%;
+    background-color: lightcoral;
+  }
+
+  .col-12 {
+    width: 100%;
+    background-color: lightcoral;
+  }
+}
+
+/* Styles for screens between 768px and 991px */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  .col-md-3 {
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+  }
+
+  .col-md-9 {
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+  }
+}
+
   
